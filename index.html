@@ -1,0 +1,108 @@
+<!--DOCTYPE HTML -->
+
+<html>
+<head>
+    <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+    <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
+    <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script src="angular.min.js"></script>
+    </head>
+    <body>
+<div data-role="page" id="listpage">
+<div data-role="panel" id="mypanel">
+    <ul data-role="listview">
+        <li data-icon="plus"><a href="#neworder">NEW ORDER</a></li>
+        <li data-icon="bars"><a href="#">REPORTS</a></li>    
+    </ul>
+</div>
+  <div data-role="header">
+    <h2>HOME</h2>
+    <a href="#mypanel" class="ui-btn-left" data-icon="bullets">&nbsp;</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+      <ul data-role="listview" data-inset="true">
+      <li data-role="list-divider">
+          MARCH 2015 <br>
+          TOTAL: Ksh. 30,500<br>
+          PAID: Ksh. 20,100<br>
+          Acc Blc.: 15,000  <br>  
+          
+          </li>
+   
+
+          <li><a id="1" class="cnav" href="#neworder">
+                DSTV Ksh 8,500
+          </a></li>
+          <li><a id="2" class="cnav" href="#neworder">
+            KPLC Ksh. 11,200
+          </a></li>
+          <li><a id="2" class="cnav" href="#neworder">
+            Garderner(0710286480) Ksh. 3,500
+          </a></li>
+          <li><a id="2" class="cnav" href="#neworder">
+            Nephew Ksh. 2,200
+          </a></li>
+          <li><a id="2" class="cnav" href="#neworder">
+            NWSC Ksh. 1,800
+          </a></li>
+        </ul>
+      
+  </div>
+  
+
+  <div data-role="footer">
+	<div class="footerContainer">  
+		<i>&copy; VERVE, 2015</i>
+	</div>
+  </div>
+</div>
+
+<div data-role="page" id="neworder">
+  <div data-role="header">
+    <h2>ADD PAYMENT</h2>
+      <a href="#listpage" class="ui-btn-right" data-icon="plus">Add</a>
+  </div>
+
+  <div data-role="main" class="ui-content">
+      <form id="frmorder">
+        <label>Name</label>
+        <input type="text" id="pname" name="pname"/>
+        <label>Phone number/ Paybill number</label>
+        <input type="text" id="receiving" name="receiving"/>
+        <label>Amount</label>
+        <input type="text" id="pnumber" name="pnumber"/>
+        <fieldset data-role="controlgroup">
+            <legend>Repeat period:</legend>
+                <input type="radio" name="period" id="radio-choice-1" value="choice-1" checked="checked" />
+                <label for="radio-choice-1">Daily</label>
+
+                <input type="radio" name="period" id="radio-choice-2" value="choice-2"  />
+                <label for="radio-choice-2">Weekly</label>
+
+                <input type="radio" name="period" id="radio-choice-3" value="choice-3"  />
+                <label for="radio-choice-3">Monthly</label>
+
+                <input type="radio" name="period" id="radio-choice-4" value="choice-4"  />
+                <label for="radio-choice-4">Yearly</label>
+        </fieldset>
+          <label>Start date</label>
+          <input type="text" data-role="date" name="psdate" id="psdate">
+        
+      </form>
+  </div>
+  
+
+  <div data-role="footer">
+	<div class="footerContainer">  
+		<i>&copy; VERVE, 2015</i>
+	</div>
+  </div>
+</div>
+    
+    
+    </body>
+
+
+
+</html>
