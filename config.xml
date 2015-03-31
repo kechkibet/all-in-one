@@ -6,10 +6,10 @@
         id        = "com.phonegap.helloworld"
         version   = "1.0.0">
 
-    <name>NSSF Mobile</name>
+    <name>ONE APP</name>
 
     <description>
-        NSSF Mobile app to process payrolls and obtain SF24 and UPN.
+        FOR DEMO ONLY
     </description>
 
     <author href="http://phonegap.com" email="support@phonegap.com">
