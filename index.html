@@ -8,7 +8,9 @@
     <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script src="angular.min.js"></script>
     <script type="text/javascript">
-    document.addEventListener("deviceready", onDeviceReady, false);
+    function onLoad() {
+        document.addEventListener("deviceready", onDeviceReady, false);
+    }
 
     function onDeviceReady() {
         // Now safe to use device APIs
@@ -21,7 +23,7 @@
     }
     </script>
     </head>
-    <body>
+    <body onload="onLoad()">
 <div data-role="page" id="listpage">
 <div data-role="panel" id="mypanel">
     <ul data-role="listview">
