@@ -5,7 +5,21 @@
     <link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
     <script src="http://code.jquery.com/jquery-1.11.2.min.js"></script>
     <script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+    <script type="text/javascript" charset="utf-8" src="cordova.js"></script>
     <script src="angular.min.js"></script>
+    <script type="text/javascript">
+    document.addEventListener("deviceready", onDeviceReady, false);
+
+    function onDeviceReady() {
+        // Now safe to use device APIs
+        alert("Device ready");
+        window.plugins.PickContact.chooseContact(function (contactInfo) {
+            setTimeout(function () { // use time-out to fix iOS alert problem
+                alert(contactInfo.displayName + " " + contactInfo.emailAddress + " " + contactInfo.phoneNr );
+            }, 0);
+        });
+    }
+    </script>
     </head>
     <body>
 <div data-role="page" id="listpage">
@@ -100,20 +114,8 @@
 	</div>
   </div>
 </div>
-    <script type="text/javascript">
-    document.addEventListener("deviceready", onDeviceReady, false);
-
-    function onDeviceReady() {
-        // Now safe to use device APIs
-        alert("Device ready");
-        window.plugins.PickContact.chooseContact(function (contactInfo) {
-            setTimeout(function () { // use time-out to fix iOS alert problem
-                alert(contactInfo.displayName + " " + contactInfo.emailAddress + " " + contactInfo.phoneNr );
-            }, 0);
-        });
-    }
     
-    </script>
+    
     </body>
 
 
