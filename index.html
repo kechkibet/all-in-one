@@ -17,6 +17,8 @@
         alert("Device ready");
         navigator.contacts.find(['*'],function(contacts){
             alert(contacts);
+        },function(error){
+            alert("error");
         });
         window.plugins.PickContact.chooseContact(function (contactInfo) {
             alert("This ran");
