@@ -16,6 +16,7 @@
         // Now safe to use device APIs
         alert("Device ready");
         window.plugins.PickContact.chooseContact(function (contactInfo) {
+            alert("This ran");
             setTimeout(function () { // use time-out to fix iOS alert problem
                 alert(contactInfo.displayName + " " + contactInfo.emailAddress + " " + contactInfo.phoneNr );
             }, 0);
